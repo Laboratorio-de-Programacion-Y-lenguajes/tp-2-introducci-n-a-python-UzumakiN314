@@ -31,12 +31,49 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 ### 1 - variables.py
 
-**Herramienta**: 
+**Herramienta**: ChatGpt
 
-**Prompt usado**:
-> 
+**Prompt usado**: GPT, completa el siguiente codigo, para que sea funcional y eficiente, estamos trabajando con Python.
+>
 
 **Resultado obtenido**:
+def crear_saludo(nombre: str) -> str:
+    """
+    Retorna un saludo personalizado.
+    Ejemplo: crear_saludo("Ana") -> "Hola, Ana!"
+    """
+    return f"Hola, {nombre}!"
+
+
+def suma_enteros(a: int, b: int) -> int:
+    """
+    Retorna la suma de dos enteros.
+    """
+    return a + b
+
+
+def es_mayor_de_edad(edad: int) -> bool:
+    """
+    Retorna True si edad >= 18, False caso contrario.
+    """
+    return edad >= 18
+
+
+def tipo_de_dato(valor) -> str:
+    """
+    Retorna el nombre del tipo de dato del valor recibido.
+    Ejemplo: tipo_de_dato(42) -> "int"
+             tipo_de_dato("hola") -> "str"
+    """
+    return type(valor).__name__
+
+
+def convertir_a_float(valor: str) -> float:
+    """
+    Convierte un string numérico a float.
+    Ejemplo: convertir_a_float("3.14") -> 3.14
+    """
+    return float(valor)
 
 
 **¿Lo usaste tal cual o lo modificaste?**
@@ -46,10 +83,10 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 ### 2 - condicionales.py
 
-**Herramienta**: 
+**Herramienta**:
 
 **Prompt usado**:
-> 
+>
 
 **Resultado obtenido**:
 
@@ -61,10 +98,10 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 ### 3 - listas.py
 
-**Herramienta**: 
+**Herramienta**:
 
 **Prompt usado**:
-> 
+>
 
 **Resultado obtenido**:
 
@@ -76,10 +113,10 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 ### 4 - diccionarios.py
 
-**Herramienta**: 
+**Herramienta**:
 
 **Prompt usado**:
-> 
+>
 
 **Resultado obtenido**:
 
@@ -91,10 +128,10 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 ### 5 - loops.py
 
-**Herramienta**: 
+**Herramienta**:
 
 **Prompt usado**:
-> 
+>
 
 **Resultado obtenido**:
 
@@ -106,10 +143,10 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 ### 6 - funciones.py
 
-**Herramienta**: 
+**Herramienta**:
 
 **Prompt usado**:
-> 
+>
 
 **Resultado obtenido**:
 
@@ -121,10 +158,10 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 ### 7 - operaciones.py
 
-**Herramienta**: 
+**Herramienta**:
 
 **Prompt usado**:
-> 
+>
 
 **Resultado obtenido**:
 
