@@ -18,7 +18,7 @@ def memoizar(f):
         return cache[n]
     return wrapper
 
-def reducir(funcion, lista, inicial):
+def reducir(lista, funcion, inicial):
     resultado = inicial
     for elemento in lista:
         resultado = funcion(resultado, elemento)
