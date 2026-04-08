@@ -2,50 +2,14 @@
 # MÓDULO 3: Listas
 # ============================================================
 
-
-def suma_lista(numeros: list) -> int | float:
-    """
-    Retorna la suma de todos los elementos de la lista.
-    """
+def suma_lista(numeros: list) -> float:
     return sum(numeros)
-    pass
-
 
 def filtrar_pares(numeros: list) -> list:
-    """
-    Retorna una nueva lista con solo los números pares.
-    """
     return [n for n in numeros if n % 2 == 0]
-    pass
-
-
-def invertir_lista(lista: list) -> list:
-    """
-    Retorna la lista invertida SIN modificar la original.
-    """
-    return lista[::-1]
-    pass
-
 
 def eliminar_duplicados(lista: list) -> list:
-    """
-    Retorna una nueva lista sin elementos duplicados,
-    manteniendo el orden de primera aparición.
-    """
-    vistos = set()
-    resultado = []
-    for item in lista:
-        if item not in vistos:
-            resultado.append(item)
-            vistos.add(item)
-    return resultado
-    pass
+    return list(dict.fromkeys(lista))
 
-
-def aplanar_lista(lista: list) -> list:
-    """
-    Dada una lista de listas, retorna todos los elementos en una sola lista.
-    Ejemplo: aplanar_lista([[1,2],[3,4]]) -> [1, 2, 3, 4]
-    """
-    return [item for sublist in lista for item in sublist]
-    pass
+def aplanar_lista(lista_de_listas: list) -> list:
+    return [item for sublista in lista_de_listas for item in sublista]

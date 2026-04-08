@@ -58,144 +58,57 @@ Funciones a implementar:
 >
 
 **Resultado obtenido**:
-def crear_saludo(nombre: str) -> str:
-    """
-    Retorna un saludo personalizado.
-    Ejemplo: crear_saludo("Ana") -> "Hola, Ana!"
-    """
-    return f"Hola, {nombre}!"
 
+def armar_mensaje(nombre: str, edad: int, ciudad: str) -> str:
+    """Devuelve un saludo formateado."""
+    return f"Soy {nombre}, tengo {edad} años y vivo en {ciudad}."
 
-def suma_enteros(a: int, b: int) -> int:
-    """
-    Retorna la suma de dos enteros.
-    """
+def suma(a: int, b: int) -> int:
     return a + b
 
-
 def es_mayor_de_edad(edad: int) -> bool:
-    """
-    Retorna True si edad >= 18, False caso contrario.
-    """
     return edad >= 18
 
-
-def tipo_de_dato(valor) -> str:
-    """
-    Retorna el nombre del tipo de dato del valor recibido.
-    Ejemplo: tipo_de_dato(42) -> "int"
-             tipo_de_dato("hola") -> "str"
-    """
-    return type(valor).__name__
-
-
 def convertir_a_float(valor: str) -> float:
-    """
-    Convierte un string numérico a float.
-    Ejemplo: convertir_a_float("3.14") -> 3.14
-    """
     return float(valor)
 
 
+
 **¿Lo usaste tal cual o lo modificaste?**
-Lo deje tal cual
+Lo MEJORE CON otra ia
 
 ---
 
 ### 2 - condicionales.py
 
-**Herramienta**: GPT
+**Herramienta**: GEMINI
 
-**Prompt usado**: GPT Actuá como tutor de Python 3.13. Dame una receta paso a paso para:
+**Prompt usado**:
+>Estoy armando un módulo condicionales.py en Python con estas funciones:
 
-    crear varias funciones que usen condicionales,
-    no modificar los nombres de las funciones ni sus parámetros,
-    cada función debe incluir un docstring explicativo.
+clasificar_numero
+mayor_de_tres
+clasificar_nota
+es_bisiesto
 
-Funciones a implementar:
+Antes de escribirme el código, haceme 3 preguntas cortas para confirmar criterios importantes (por ejemplo: textos exactos de salida, rangos de notas, reglas de bisiesto, etc.).
 
-1. clasificar_numero(n: int) -> str
-    - Retorna "positivo", "negativo" o "cero" según corresponda.
-
-2. mayor_de_tres(a: int, b: int, c: int) -> int
-    - Retorna el mayor de tres números.
-
-3. clasificar_nota(nota: float) -> str
-    - Retorna la categoría de la nota:
-        * nota >= 9: "Sobresaliente"
-        * nota >= 7: "Bueno"
-        * nota >= 6: "Aprobado"
-        * nota < 6:  "Desaprobado"
-
-4. es_bisiesto(anio: int) -> bool
-    - Retorna True si el año es bisiesto, False en caso contrario.
-    - Un año es bisiesto si es divisible por 4,
-      excepto los divisibles por 100, salvo que también lo sean por 400.
+Después de eso, generá el código de las funciones de forma que pase estos tests con pytest (aqui se colocaron los modulos del test de condicionales)
 
 **Resultado obtenido**:
-# ============================================================
-# MÓDULO 2: Condicionales
-# ============================================================
-
-
 def clasificar_numero(n: int) -> str:
-    """
-    Retorna "positivo", "negativo" o "cero" según corresponda.
-    """
-    if n > 0:
-        return "positivo"
-    elif n < 0:
-        return "negativo"
-    else:        return "cero"
-    pass
-
-
-def mayor_de_tres(a: int, b: int, c: int) -> int:
-    """
-    Retorna el mayor de tres números.
-    """
-
-    if a >= b and a >= c:
-        return a
-    elif b >= a and b >= c:
-        return b
-    else:
-        return c
-    pass
-
+    if n == 0: return "Cero"
+    if n < 0: return "Negativo"
+    return "Positivo Par" if n % 2 == 0 else "Positivo Impar"
 
 def clasificar_nota(nota: float) -> str:
-    """
-    Retorna la categoría de la nota:
-    - nota >= 9: "Sobresaliente"
-    - nota >= 7: "Bueno"
-    - nota >= 6: "Aprobado"
-    - nota < 6:  "Desaprobado"
-    """
-
-    if nota >= 9:
-        return "Sobresaliente"
-    elif nota >= 7:
-        return "Bueno"
-    elif nota >= 6:
-        return "Aprobado"
-    else:
-        return "Desaprobado"
-
-    pass
-
+    if nota >= 9: return "Sobresaliente"
+    if nota >= 7: return "Bueno"
+    if nota >= 4: return "Aprobado"
+    return "Desaprobado"
 
 def es_bisiesto(anio: int) -> bool:
-    """
-    Retorna True si el año es bisiesto.
-    Un año es bisiesto si es divisible por 4,
-    excepto los divisibles por 100, salvo que también lo sean por 400.
-    """
-    if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
-        return True
-    else:        return False
-    pass
-
+    return (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0)
 
 **¿Lo usaste tal cual o lo modificaste?**
 Lo deje tal cual
@@ -204,31 +117,49 @@ Lo deje tal cual
 
 ### 3 - listas.py
 
-**Herramienta**: Copilot
+**Herramienta**: GEMINI
 
 **Prompt usado**:
->>Ninguno, github copilot resolvio
-
+>Estoy resolviendo ejercicios de listas en Python: sumar elementos, filtrar pares, invertir listas sin modificar la original y eliminar duplicados manteniendo el orden. ¿Podés actuar como verificador cognitivo? Enumerá casos borde (como listas vacías o con elementos anidados), decime errores típicos al usar set() para duplicados y proponé 3 tests para una función aplanar_lista(lista_de_listas) sin escribir el código todavía.
 
 **Resultado obtenido**:
-El codigo directamente
+def suma_lista(numeros: list) -> float:
+    return sum(numeros)
+
+def filtrar_pares(numeros: list) -> list:
+    return [n for n in numeros if n % 2 == 0]
+
+def eliminar_duplicados(lista: list) -> list:
+    # Usar dict.fromkeys para mantener el orden (set() no lo garantiza)
+    return list(dict.fromkeys(lista))
+
+def aplanar_lista(lista_de_listas: list) -> list:
+    return [item for sublista in lista_de_listas for item in sublista]
 
 **¿Lo usaste tal cual o lo modificaste?**
-Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
-
+Lo usé tal cual. La recomendación de usar dict.fromkeys para los duplicados fue muy útil para mantener el orden original.
 
 ---
 
 ### 4 - diccionarios.py
 
-**Herramienta**: Copilot
+**Herramienta**: GEMINI
 
 **Prompt usado**:
->Ninguno, github copilot resolvio
+>Generá 8 ejemplos de textos cortos y mostrá cómo quedarían al pasar por una función contar_palabras(texto) que devuelva un diccionario. También mostrá ejemplos de cómo invertir un diccionario (llaves por valores) y cómo combinar dos diccionarios si tienen claves repetidas. Extraé una regla general para manejar conflictos de claves en un merge.
 
 **Resultado obtenido**:
-El codigo directamente
+def contar_palabras(texto: str) -> dict:
+    palabras = texto.lower().split()
+    return {p: palabras.count(p) for p in palabras}
 
+def invertir_diccionario(d: dict) -> dict:
+    return {v: k for k, v in d.items()}
+
+def merge_diccionarios(d1: dict, d2: dict) -> dict:
+    res = d1.copy()
+    res.update(d2)
+    return res
 **¿Lo usaste tal cual o lo modificaste?**
 Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
@@ -236,143 +167,108 @@ Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 ### 5 - loops.py
 
-**Herramienta**: Copilot & LO HIZO MAL, asi que le pedi a GPT
+**Herramienta**: GPT
 
 
 **Prompt usado**:
->No anda el palindromo, puedes arreglarlo??
+>Prompt (Refinamiento de preguntas – Loops):
+
+P1: ¿Cómo puedo usar un for para generar una lista de números del 1 al N en Python?
+P2: ¿Cuál es una forma simple de recorrer un número y, por ejemplo, construir una tabla de multiplicar del 1 al 10?
+P3: Si tengo un número como 123, ¿cómo recorro cada dígito para sumarlos? ¿Conviene convertirlo a string o usar operaciones matemáticas?
+P4: ¿Cómo puedo usar un loop para verificar si un número es primo sin hacerlo innecesariamente lento?
+P5: ¿Cómo generaría una lista con los primeros N números de Fibonacci usando un bucle?
+
+Con eso en mente, mostrame una implementación en Python de estas funciones:
+
+contar_hasta(n: int) -> list[int]
+tabla_multiplicar(n: int) -> list[int]
+suma_digitos(n: int) -> int
+es_primo(n: int) -> bool
+fibonacci(n: int) -> list[int]
+
+La idea es que el código sea claro, usando loops y lógica simple.
 
 **Resultado obtenido**:
-Eso significa que la función es_palindromo no está retornando nada, es decir, devuelve None por defecto. En Python, si tu función no tiene un return, siempre devuelve None. Por eso tus tests fallan.
+# ============================================================
+# MÓDULO 5: Loops
+# ============================================================
+
+def contar_hasta(n: int) -> list:
+    resultado = []
+    for i in range(1, n + 1):
+        resultado.append(i)
+    return resultado
+
+
+def tabla_multiplicar(n: int):
+    return [n * i for i in range(1, 11)]
+
+
+def suma_digitos(n: int) -> int:
+    total = 0
+    for digito in str(n):
+        total += int(digito)
+    return total
+
+
+def es_primo(n: int) -> bool:
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+
+def fibonacci(n: int) -> list:
+    if n <= 0:
+        return []
+    if n == 1:
+        return [0]
+
+    res = [0, 1]
+    while len(res) < n:
+        res.append(res[-1] + res[-2])
+    return res
 
 **¿Lo usaste tal cual o lo modificaste?**
-Lo use tal cual
+Lo deje tal cual, porque poco recuerdo de matematicas
+
 ---
 
 ### 6 - funciones.py
 
-**Herramienta**: Copilot
+**Herramienta**: GEMINI
 
 **Prompt usado**:
->Ninguno, github copilot resolvio
+>Necesito implementar funciones: aplicar_funcion, componer(f, g), reducir y un decorador memoizar. Analizá los pros y contras de usar recursión vs loops para estas tareas, y explicá por qué la memoización es útil para la performance. Luego, recomendá la implementación más limpia y escribí el código con docstrings.
 
 **Resultado obtenido**:
-El codigo directamente
+def aplicar_funcion(f, lista):
+    return [f(x) for x in lista]
 
+def componer(f, g):
+    return lambda x: f(g(x))
+
+def memoizar(f):
+    cache = {}
+    def wrapper(n):
+        if n not in cache: cache[n] = f(n)
+        return cache[n]
+    return wrapper
 **¿Lo usaste tal cual o lo modificaste?**
-Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
+Lo deje como estaba
 
 ---
 
 ### 7 - operaciones.py
 
-**Herramienta**: ChatGpt primero, luego COPILOT
+**Herramienta**: ChatGpt primero, luego GEMINI
 
 **Prompt usado**:
-># ============================================================
-# MÓDULO 7: Operaciones con Strings
-# ============================================================
+>Tengo que implementar funciones de procesamiento de texto como es_palindromo(texto), capitalizar_palabras y un caesar_cipher. Compará dos enfoques para el palíndromo: A) usar un loop que compare extremos, B) usar slicing [::-1]. Elegí el más adecuado para un TP de principiantes, justificá por qué usar .lower() y .replace(" ", "") es necesario, y escribí el código final.
 
-def es_palindromo(texto: str) -> bool:
-    """
-    Determina si un texto es un palíndromo.
-
-    Ignora mayúsculas, minúsculas y espacios.
-
-    Args:
-        texto (str): El texto a evaluar.
-
-    Returns:
-        bool: True si el texto es palíndromo, False en caso contrario.
-
-    Ejemplo:
-        >>> es_palindromo("Anita lava la tina")
-        True
-    """
-    # Normalizamos el texto: eliminamos espacios y pasamos a minúsculas
-    texto_limpio = ''.join(texto.lower().split())
-    # Comparamos con su reverso
-    return texto_limpio == texto_limpio[::-1]
-
-
-def capitalizar_palabras(texto: str) -> str:
-    """
-    Capitaliza la primera letra de cada palabra en el texto.
-
-    Args:
-        texto (str): Texto a capitalizar.
-
-    Returns:
-        str: Texto con la primera letra de cada palabra en mayúscula.
-
-    Ejemplo:
-        >>> capitalizar_palabras("hola mundo")
-        'Hola Mundo'
-    """
-    # Usamos split y join para mantener control sobre cada palabra
-    palabras = texto.split()
-    palabras_cap = [palabra.capitalize() for palabra in palabras]
-    return ' '.join(palabras_cap)
-
-
-def contar_vocales(texto: str) -> int:
-    """
-    Cuenta la cantidad de vocales en un texto (a, e, i, o, u),
-    sin distinguir entre mayúsculas y minúsculas.
-
-    Args:
-        texto (str): Texto donde se contarán las vocales.
-
-    Returns:
-        int: Número de vocales en el texto.
-
-    Ejemplo:
-        >>> contar_vocales("Hola Mundo")
-        4
-    """
-    vocales = "aeiou"
-    return sum(1 for c in texto.lower() if c in vocales)
-
-
-def caesar_cipher(texto: str, desplazamiento: int) -> str:
-    """
-    Aplica el cifrado César a un texto con un desplazamiento dado.
-    Solo desplaza letras (a-z, A-Z). Otros caracteres se mantienen igual.
-
-    Args:
-        texto (str): Texto a cifrar.
-        desplazamiento (int): Número de posiciones a desplazar.
-
-    Returns:
-        str: Texto cifrado con el método César.
-
-    Ejemplo:
-        >>> caesar_cipher("abc XYZ", 3)
-        'def ABC'
-    """
-    resultado = []
-
-    for c in texto:
-        if c.isalpha():
-            # Determinamos base según mayúscula o minúscula
-            base = ord('A') if c.isupper() else ord('a')
-            # Desplazamos letra dentro del rango de 26 caracteres
-            resultado.append(chr((ord(c) - base + desplazamiento) % 26 + base))
-        else:
-            # Caracteres no alfabéticos no se modifican
-            resultado.append(c)
-
-    return ''.join(resultado)
-
-
-# ============================================================
-# Código de prueba rápido
-# ============================================================
-if __name__ == "__main__":
-    print(es_palindromo("Anita lava la tina"))  # True
-    print(capitalizar_palabras("hola mundo"))   # Hola Mundo
-    print(contar_vocales("Hola Mundo"))        # 4
-    print(caesar_cipher("abc XYZ", 3))         # def ABC
 
 **Resultado obtenido**:
 
