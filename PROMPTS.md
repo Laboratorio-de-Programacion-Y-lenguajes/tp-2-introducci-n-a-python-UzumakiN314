@@ -145,16 +145,16 @@ Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 ---
 ### 6 - funciones.py
 
-**Herramienta**:
+**Herramienta**: Copilot
 
 **Prompt usado**:
->
+>Ninguno, github copilot resolvio
 
 **Resultado obtenido**:
-
+El codigo directamente
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 ---
 
