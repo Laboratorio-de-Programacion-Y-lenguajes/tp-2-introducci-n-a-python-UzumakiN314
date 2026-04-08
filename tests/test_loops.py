@@ -35,5 +35,7 @@ def test_es_primo_false():
 
 
 def test_fibonacci():
+
     assert fibonacci(6) == [0, 1, 1, 2, 3, 5]
     assert fibonacci(1) == [0]
+    assert fibonacci(0) == []

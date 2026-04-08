@@ -1,39 +1,18 @@
 # ============================================================
 # MÓDULO 4: Diccionarios
 # ============================================================
-
-
 def contar_palabras(texto: str) -> dict:
-    """
-    Retorna un diccionario con la frecuencia de cada palabra.
-    Ejemplo: contar_palabras("hola mundo hola") -> {"hola": 2, "mundo": 1}
-    Las palabras deben ser comparadas en minúsculas.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
+    palabras = texto.lower().split()
+    return {p: palabras.count(p) for p in palabras}
 
 def invertir_diccionario(d: dict) -> dict:
-    """
-    Retorna un nuevo diccionario con claves y valores intercambiados.
-    Ejemplo: invertir_diccionario({"a": 1}) -> {1: "a"}
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
+    return {v: k for k, v in d.items()}
 
 def merge_diccionarios(d1: dict, d2: dict) -> dict:
-    """
-    Combina dos diccionarios. Si hay claves repetidas, prevalece d2.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+    res = d1.copy()
+    res.update(d2)
+    return res
 
-
-def filtrar_por_valor(d: dict, minimo: int) -> dict:
-    """
-    Retorna un nuevo diccionario con solo los pares
-    cuyo valor sea >= minimo.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+def filtrar_por_valor(d: dict, umbral: int) -> dict:
+    # Usamos >= para incluir los valores que son iguales al umbral
+    return {k: v for k, v in d.items() if v >= umbral}
