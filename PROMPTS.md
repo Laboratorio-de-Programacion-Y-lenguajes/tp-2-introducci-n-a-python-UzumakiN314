@@ -158,16 +158,119 @@ def convertir_a_float(valor: str) -> float:
 
 ### 7 - operaciones.py
 
-**Herramienta**:
+**Herramienta**: ChatGpt primero, luego COPILOT
 
 **Prompt usado**:
->
+># ============================================================
+# MÓDULO 7: Operaciones con Strings
+# ============================================================
+
+def es_palindromo(texto: str) -> bool:
+    """
+    Determina si un texto es un palíndromo.
+
+    Ignora mayúsculas, minúsculas y espacios.
+
+    Args:
+        texto (str): El texto a evaluar.
+
+    Returns:
+        bool: True si el texto es palíndromo, False en caso contrario.
+
+    Ejemplo:
+        >>> es_palindromo("Anita lava la tina")
+        True
+    """
+    # Normalizamos el texto: eliminamos espacios y pasamos a minúsculas
+    texto_limpio = ''.join(texto.lower().split())
+    # Comparamos con su reverso
+    return texto_limpio == texto_limpio[::-1]
+
+
+def capitalizar_palabras(texto: str) -> str:
+    """
+    Capitaliza la primera letra de cada palabra en el texto.
+
+    Args:
+        texto (str): Texto a capitalizar.
+
+    Returns:
+        str: Texto con la primera letra de cada palabra en mayúscula.
+
+    Ejemplo:
+        >>> capitalizar_palabras("hola mundo")
+        'Hola Mundo'
+    """
+    # Usamos split y join para mantener control sobre cada palabra
+    palabras = texto.split()
+    palabras_cap = [palabra.capitalize() for palabra in palabras]
+    return ' '.join(palabras_cap)
+
+
+def contar_vocales(texto: str) -> int:
+    """
+    Cuenta la cantidad de vocales en un texto (a, e, i, o, u),
+    sin distinguir entre mayúsculas y minúsculas.
+
+    Args:
+        texto (str): Texto donde se contarán las vocales.
+
+    Returns:
+        int: Número de vocales en el texto.
+
+    Ejemplo:
+        >>> contar_vocales("Hola Mundo")
+        4
+    """
+    vocales = "aeiou"
+    return sum(1 for c in texto.lower() if c in vocales)
+
+
+def caesar_cipher(texto: str, desplazamiento: int) -> str:
+    """
+    Aplica el cifrado César a un texto con un desplazamiento dado.
+    Solo desplaza letras (a-z, A-Z). Otros caracteres se mantienen igual.
+
+    Args:
+        texto (str): Texto a cifrar.
+        desplazamiento (int): Número de posiciones a desplazar.
+
+    Returns:
+        str: Texto cifrado con el método César.
+
+    Ejemplo:
+        >>> caesar_cipher("abc XYZ", 3)
+        'def ABC'
+    """
+    resultado = []
+
+    for c in texto:
+        if c.isalpha():
+            # Determinamos base según mayúscula o minúscula
+            base = ord('A') if c.isupper() else ord('a')
+            # Desplazamos letra dentro del rango de 26 caracteres
+            resultado.append(chr((ord(c) - base + desplazamiento) % 26 + base))
+        else:
+            # Caracteres no alfabéticos no se modifican
+            resultado.append(c)
+
+    return ''.join(resultado)
+
+
+# ============================================================
+# Código de prueba rápido
+# ============================================================
+if __name__ == "__main__":
+    print(es_palindromo("Anita lava la tina"))  # True
+    print(capitalizar_palabras("hola mundo"))   # Hola Mundo
+    print(contar_vocales("Hola Mundo"))        # 4
+    print(caesar_cipher("abc XYZ", 3))         # def ABC
 
 **Resultado obtenido**:
 
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+Me dio mucho codigo innecesario, tuve que corregir con Copilot
 
 ---
 
