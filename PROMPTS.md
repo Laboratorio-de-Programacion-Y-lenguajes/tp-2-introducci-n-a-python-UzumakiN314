@@ -83,15 +83,16 @@ def convertir_a_float(valor: str) -> float:
 
 ### 2 - condicionales.py
 
-**Herramienta**:
+**Herramienta**: Copilot
 
 **Prompt usado**:
->
+>Ninguno, github copilot resolvio
 
 **Resultado obtenido**:
-
+El codigo directamente
 
 **¿Lo usaste tal cual o lo modificaste?**
+Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 
 ---
@@ -130,19 +131,18 @@ Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 ### 5 - loops.py
 
-**Herramienta**:
+**Herramienta**: Copilot
 
 **Prompt usado**:
->
+>Ninguno, github copilot resolvio
 
 **Resultado obtenido**:
-
+El codigo directamente
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 ---
-
 ### 6 - funciones.py
 
 **Herramienta**:
