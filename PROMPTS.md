@@ -33,7 +33,28 @@ Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
 
 **Herramienta**: ChatGpt
 
-**Prompt usado**: GPT, completa el siguiente codigo, para que sea funcional y eficiente, estamos trabajando con Python.
+**Prompt usado**: GPT, Actuá como tutor de Python 3.13. Dame una receta paso a paso para:
+
+    crear varias funciones que trabajen con variables y tipos de datos,
+    no modificar los nombres de las funciones ni sus parámetros,
+    cada función debe incluir un docstring explicativo.
+
+Funciones a implementar:
+
+1. crear_saludo(nombre: str) -> str
+    - Retorna un saludo personalizado en el formato: "Hola, {nombre}!"
+
+2. suma_enteros(a: int, b: int) -> int
+    - Retorna la suma de dos enteros.
+
+3. es_mayor_de_edad(edad: int) -> bool
+    - Retorna True si la edad es mayor o igual a 18, False en caso contrario.
+
+4. tipo_de_dato(valor) -> str
+    - Retorna el nombre del tipo de dato del valor recibido (ej: "int", "str", "float").
+
+5. convertir_a_float(valor: str) -> float
+    - Convierte un string numérico a un número de tipo float.
 >
 
 **Resultado obtenido**:
@@ -131,17 +152,17 @@ Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 ### 5 - loops.py
 
-**Herramienta**: Copilot & LO HIZO MAL
+**Herramienta**: Copilot & LO HIZO MAL, asi que le pedi a GPT
+
 
 **Prompt usado**:
->Ninguno, github copilot resolvio
+>No anda el palindromo, puedes arreglarlo??
 
 **Resultado obtenido**:
-El codigo directamente
+Eso significa que la función es_palindromo no está retornando nada, es decir, devuelve None por defecto. En Python, si tu función no tiene un return, siempre devuelve None. Por eso tus tests fallan.
 
 **¿Lo usaste tal cual o lo modificaste?**
-Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
-
+Lo use tal cual
 ---
 
 ### 6 - funciones.py

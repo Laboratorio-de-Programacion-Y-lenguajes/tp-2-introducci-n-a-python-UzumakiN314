@@ -8,7 +8,11 @@ def es_palindromo(texto: str) -> bool:
     Retorna True si el texto es palíndromo (ignorando espacios y mayúsculas).
     Ejemplo: es_palindromo("Anita lava la tina") -> True
     """
-    texto_limpio = texto.replace(" ", "").lower().split()
+def es_palindromo(texto):
+    # Normalizamos el texto (opcional: minusculas y quitar espacios)
+    texto = texto.lower().replace(" ", "")
+    # Comparamos con su reverso
+    return texto == texto[::-1]
     pass
 
 
