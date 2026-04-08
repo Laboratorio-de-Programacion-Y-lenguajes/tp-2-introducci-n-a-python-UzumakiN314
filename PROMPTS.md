@@ -131,7 +131,7 @@ Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 ### 5 - loops.py
 
-**Herramienta**: Copilot
+**Herramienta**: Copilot & LO HIZO MAL
 
 **Prompt usado**:
 >Ninguno, github copilot resolvio
@@ -143,6 +143,7 @@ El codigo directamente
 Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
 
 ---
+
 ### 6 - funciones.py
 
 **Herramienta**: Copilot
@@ -281,5 +282,6 @@ Me dio mucho codigo innecesario, tuve que corregir con Copilot
 Respondé brevemente (3-5 oraciones):
 
 - ¿Qué aprendiste sobre cómo formular buenos prompts?
+
 - ¿En qué casos la IA fue útil y en cuáles no?
 - ¿Qué harías diferente la próxima vez?

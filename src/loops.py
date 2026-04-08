@@ -8,7 +8,7 @@ def contar_hasta(n: int) -> list:
     Retorna una lista con los números del 1 al n (inclusive).
     """
     return list(range(1, n + 1))
-    pass
+
 
 
 def tabla_multiplicar(n: int) -> list:
@@ -17,7 +17,7 @@ def tabla_multiplicar(n: int) -> list:
     Ejemplo: tabla_multiplicar(3) -> [3, 6, 9, ..., 30]
     """
     return [n * i for i in range(1, 11)]
-    pass
+
 
 
 def suma_digitos(n: int) -> int:
@@ -29,7 +29,7 @@ def suma_digitos(n: int) -> int:
     for d in str(n):
         total += int(d)
     return total
-    pass
+
 
 
 def es_primo(n: int) -> bool:
@@ -42,7 +42,7 @@ def es_primo(n: int) -> bool:
         if n % i == 0:
             return False
     return True
-    pass
+
 
 
 def fibonacci(n: int) -> list:
@@ -61,4 +61,4 @@ def fibonacci(n: int) -> list:
         for i in range(2, n):
             fib.append(fib[i-1] + fib[i-2])
         return fib
-    pass
+
