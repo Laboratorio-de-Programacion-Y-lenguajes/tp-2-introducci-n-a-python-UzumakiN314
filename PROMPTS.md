@@ -283,6 +283,14 @@ Me dio mucho codigo innecesario, tuve que corregir con Copilot
 Respondé brevemente (3-5 oraciones):
 
 - ¿Qué aprendiste sobre cómo formular buenos prompts?
+Los prompts permitieron generar codigo mas simples, con menos redundancia, mucho mas limpio y facil de leer. Aprendi que la precision mejora al incluir test con instrucciones, para darle contexto a la IA.
 
 - ¿En qué casos la IA fue útil y en cuáles no?
+Lamentablemente, tuve que corroborar el orden de los elementos en un par de modulos, puesto que los colocaba segun su ideal de codigo. Fue util para hacer rapido la tarea, y luego tuve que hacer prueba y error de varios modulos que no habia contemplado cuando lo habia solicitado en los prompts.
+Es decir, tuve que modificar mis prompts y controlar lo que me habia entregado.
+A su vez, tuve varios errores en los TEST, ahi la unica IA util fue GEMINI.
+
+
 - ¿Qué harías diferente la próxima vez?
+Puesto que todo es un patron en esta area (sistemas informaticos/lenguajes de programacion), dejaria armada una guia de "Buenos prompts" para reducir el tiempo de tareas basicas, en caso de seguir aplicando el mismo tipo de modularizacion en proyectos futuros.
+La IA es una buena herramienta, pero sigue siendo eso, una herramienta. Quiza deba crear un agente propio para encomendarle que el codigo siga los patrones de disenio segun determinados estandares.
