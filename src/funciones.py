@@ -3,8 +3,10 @@
 # ============================================================
 
 
-def aplicar_funcion(f, lista):
+# Cambiamos (f, lista) por (lista, f)
+def aplicar_funcion(lista, f):
     return [f(x) for x in lista]
+
 
 def componer(f, g):
     return lambda x: f(g(x))
