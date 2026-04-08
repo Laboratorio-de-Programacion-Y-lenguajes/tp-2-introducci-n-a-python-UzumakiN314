@@ -13,3 +13,6 @@ def eliminar_duplicados(lista: list) -> list:
 
 def aplanar_lista(lista_de_listas: list) -> list:
     return [item for sublista in lista_de_listas for item in sublista]
+
+def invertir_lista(lista: list) -> list:
+    return lista[::-1]

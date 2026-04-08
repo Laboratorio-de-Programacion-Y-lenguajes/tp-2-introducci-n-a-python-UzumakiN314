@@ -15,3 +15,6 @@ def clasificar_nota(nota: float) -> str:
 
 def es_bisiesto(anio: int) -> bool:
     return (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0)
+
+def mayor_de_tres(a: int, b: int, c: int) -> int:
+    return max(a, b, c)

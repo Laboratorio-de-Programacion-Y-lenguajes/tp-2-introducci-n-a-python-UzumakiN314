@@ -12,3 +12,7 @@ def merge_diccionarios(d1: dict, d2: dict) -> dict:
     res = d1.copy()
     res.update(d2)
     return res
+
+def filtrar_por_valor(d: dict, umbral: int) -> dict:
+    # Retorna un nuevo diccionario con elementos cuyo valor sea mayor al umbral
+    return {k: v for k, v in d.items() if v > umbral}
