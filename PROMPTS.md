@@ -98,23 +98,107 @@ def convertir_a_float(valor: str) -> float:
 
 
 **¿Lo usaste tal cual o lo modificaste?**
-
+Lo deje tal cual
 
 ---
 
 ### 2 - condicionales.py
 
-**Herramienta**: Copilot
+**Herramienta**: GPT
 
-**Prompt usado**:
->Ninguno, github copilot resolvio
+**Prompt usado**: GPT Actuá como tutor de Python 3.13. Dame una receta paso a paso para:
+
+    crear varias funciones que usen condicionales,
+    no modificar los nombres de las funciones ni sus parámetros,
+    cada función debe incluir un docstring explicativo.
+
+Funciones a implementar:
+
+1. clasificar_numero(n: int) -> str
+    - Retorna "positivo", "negativo" o "cero" según corresponda.
+
+2. mayor_de_tres(a: int, b: int, c: int) -> int
+    - Retorna el mayor de tres números.
+
+3. clasificar_nota(nota: float) -> str
+    - Retorna la categoría de la nota:
+        * nota >= 9: "Sobresaliente"
+        * nota >= 7: "Bueno"
+        * nota >= 6: "Aprobado"
+        * nota < 6:  "Desaprobado"
+
+4. es_bisiesto(anio: int) -> bool
+    - Retorna True si el año es bisiesto, False en caso contrario.
+    - Un año es bisiesto si es divisible por 4,
+      excepto los divisibles por 100, salvo que también lo sean por 400.
 
 **Resultado obtenido**:
-El codigo directamente
+# ============================================================
+# MÓDULO 2: Condicionales
+# ============================================================
+
+
+def clasificar_numero(n: int) -> str:
+    """
+    Retorna "positivo", "negativo" o "cero" según corresponda.
+    """
+    if n > 0:
+        return "positivo"
+    elif n < 0:
+        return "negativo"
+    else:        return "cero"
+    pass
+
+
+def mayor_de_tres(a: int, b: int, c: int) -> int:
+    """
+    Retorna el mayor de tres números.
+    """
+
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+    pass
+
+
+def clasificar_nota(nota: float) -> str:
+    """
+    Retorna la categoría de la nota:
+    - nota >= 9: "Sobresaliente"
+    - nota >= 7: "Bueno"
+    - nota >= 6: "Aprobado"
+    - nota < 6:  "Desaprobado"
+    """
+
+    if nota >= 9:
+        return "Sobresaliente"
+    elif nota >= 7:
+        return "Bueno"
+    elif nota >= 6:
+        return "Aprobado"
+    else:
+        return "Desaprobado"
+
+    pass
+
+
+def es_bisiesto(anio: int) -> bool:
+    """
+    Retorna True si el año es bisiesto.
+    Un año es bisiesto si es divisible por 4,
+    excepto los divisibles por 100, salvo que también lo sean por 400.
+    """
+    if (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0):
+        return True
+    else:        return False
+    pass
+
 
 **¿Lo usaste tal cual o lo modificaste?**
-Lo deje tal cual, pero lo corrobore con otra ia y valido los resultados.
-
+Lo deje tal cual
 
 ---
 
